@@ -1,0 +1,13 @@
+- 04/21
+1. Project Basic Setting Complete.
+2. px to rem 확장팩 설치
+3. 슬라이드 전환 효과 완료
+4. 슬라이드 텍스트 효과 완료
+5. 슬라이드 스케일 효과 완료
+6. 슬라이드 인디케이터 작업중
+
+- 04/25
+1. 슬라이더 pagenation 디자인 완료
+2. best art section 제목 완료
+3. best art 사진 슬라이더 완료
+4. best art 사진 내부 클릭 요소 작성 중
