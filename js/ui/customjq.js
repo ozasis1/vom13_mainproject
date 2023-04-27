@@ -71,4 +71,21 @@ $(function () {
     });
   }
   visualSlider();
+
+// FITTNG
+function fitImageRatio(el1, el2, elv1, elv2) {
+const mdImageWidth = $(el1).width();
+const panelWidth = $(el2).width();
+$(".panel-img").height(mdImageWidth * elv1);
+$(".panel-desc").height(panelWidth * elv2);
+}
+
+$(window).on("resize", function () {
+  // const mdImageWidth = $(".panel.-img").width();
+  // const panelWidth = $
+  // $(".panel-img").height(mdImageWidth * 0.8);
+  // $(".panel-desc").height(panelWidth * 0.4);
+  fitImageRatio(".panel-img", ".panel-desc", 0.8, 0.4);
 });
+  fitImageRatio();
+  });

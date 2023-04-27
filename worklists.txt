@@ -11,3 +11,16 @@
 2. best art section 제목 완료
 3. best art 사진 슬라이더 완료
 4. best art 사진 내부 클릭 요소 작성 중
+
+- 04/26
+1. 헤더 hide 효과 완료
+2. best art 호버 효과 완료
+3. best art aos 프레임워크 적용 완료
+4. best art section 완료
+5. md art section 탭 기능 준비
+
+- 04/27
+1. md pick 탭 기능 완료
+2. 헤더 스크롤 시 좌우 옵셋 조정
+3. 모바일 오버레이 js 적용 전전
+4. 헤더 반응형 작업 중
