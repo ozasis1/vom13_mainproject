@@ -1,10 +1,11 @@
 $(function () {
   /* -- 헤더 높이만큼 페딩 적용 */
   const headerHeight = $("header").outerHeight();
-  $(".landing").css(
-    "padding",
-    `${headerHeight}px var(--el-main) var(--el-main)`
-  );
+  $(".landing").css("padding-top", `${headerHeight}px`);
+  $(window).on("resize", function () {
+    const headerHeight = $("header").outerHeight();
+    $(".landing").css("padding-top", `${headerHeight}px`);
+  });
 
   // 메인 랜딩 슬라이더
   /*===== VISUAL SLIDER FUNCTION ===== */
@@ -66,26 +67,54 @@ $(function () {
       },
     });
 
-    visualSlider.on("slideChange", function () {
-      $(".landing-slider").removeClass("load-init");
+    visualSlider.on("slideChange", function () {  
+      $(".landing-slider").removeClass("load-init");   
     });
   }
   visualSlider();
 
-// FITTNG
-function fitImageRatio(el1, el2, elv1, elv2) {
-const mdImageWidth = $(el1).width();
-const panelWidth = $(el2).width();
-$(".panel-img").height(mdImageWidth * elv1);
-$(".panel-desc").height(panelWidth * elv2);
-}
+  /*-------- FITTING MD PICK IMAGE RATIO --------*/
+  function fitImageRatio(el1, el2, elv1, elv2) {
+    const mdImageWidth = $(el1).width();
+    const panelWidth = $(el2).width();
+    $(el1).height(mdImageWidth * elv1);
+    $(el2).height(panelWidth * elv2);
+  }
 
-$(window).on("resize", function () {
-  // const mdImageWidth = $(".panel.-img").width();
-  // const panelWidth = $
-  // $(".panel-img").height(mdImageWidth * 0.8);
-  // $(".panel-desc").height(panelWidth * 0.4);
-  fitImageRatio(".panel-img", ".panel-desc", 0.8, 0.4);
-});
-  fitImageRatio();
+  $(window).on("resize", function () {
+    fitImageRatio(
+      ".pick-tab-panel.on .panel-img",
+      ".pick-tab-panel.on .panel-desc",
+      0.8,
+      0.4
+    );
   });
+  $(".pick-tab-btn").on("click", function () {
+    fitImageRatio(
+      ".pick-tab-panel.on .panel-img",
+      ".pick-tab-panel.on .panel-desc",
+      0.8,
+      0.4
+    );
+  });
+  fitImageRatio(
+    ".pick-tab-panel.on .panel-img",
+    ".pick-tab-panel.on .panel-desc",
+    0.8,
+    0.4
+  );
+
+  /*-------- FITTING NEW ART IMAGE RATIO --------*/
+ function fitImageRatio(el1,elv2) {
+    const fitElmWidth = $(el1).width();
+    $(el1).height(fitElmWidth  * elv1);
+ }
+
+// const newArtWidth = $(".new-art-image").width();
+// $(".new-art-image").height(newArtWidth * 1.4);
+$(window).on("resize", function () {
+  const newArtWidth = $(".new-art-image").width();
+  $(".new-art-image") .height(newArtWidth * 1.4);
+  });
+});
+

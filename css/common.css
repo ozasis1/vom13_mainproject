@@ -20,4 +20,3 @@
 .more-btn a svg{position:absolute; left:0; top:0;}
 .more-btn a svg rect{fill:transparent; stroke:var(--color-pt); stroke-width: 2px; stroke-dasharray: 338% 37; stroke-dashoffset: 240%; transition:all 1.5s;}
 .more-btn a:hover svg rect{stroke-dashoffset: -100%;}
-
